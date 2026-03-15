@@ -3,32 +3,40 @@
 :root {
   --font-primary: 'Be Vietnam Pro', sans-serif;
   --font-heading: 'Playfair Display', serif;
-  --color-primary-700: #1f365c;
-  --color-primary-600: #2c4a7a;
-  --color-primary-500: #3f5f99;
-  --color-primary-400: #5d7bb3;
-  --color-primary-300: #8fa6c9;
-  --color-secondary-500: #4a6fa5;
-  --color-secondary-400: #6f8fbe;
-  --color-secondary-300: #9fb7d9;
-  --color-accent-500: #3ec6b0;
-  --color-accent-400: #5ed7c4;
-  --color-accent-300: #8be4d6;
-  --color-white: #ffffff;
-  --color-light-bg: #f7f6f3;
-  --color-soft-bg: #f1f4f8;
-  --color-card-bg: #ffffff;
-  --color-heading: #1f365c;
-  --color-text: #444444;
-  --color-text-light: #7a7a7a;
-  --color-border: #e8edf5;
-  --shadow-navbar: 0 2px 10px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
+  --color-primary-700: #12233a;
+  --color-primary-600: #173150;
+  --color-primary-500: #2b4d76;
+  --color-primary-400: #7e9bc1;
+  --color-primary-300: #bfd2ed;
+  --color-secondary-500: #6e96c6;
+  --color-secondary-400: #93b5de;
+  --color-secondary-300: #c5d8ef;
+  --color-button-primary: #4c8dff;
+  --color-button-primary-hover: #72a6ff;
+  --color-accent-500: #45cbb7;
+  --color-accent-400: #67dcc9;
+  --color-accent-300: #97ebe0;
+  --color-white: #f3f7ff;
+  --color-page-bg: #09111d;
+  --color-page-bg-alt: #0d1728;
+  --color-light-bg: #101c2f;
+  --color-soft-bg: #16253a;
+  --color-card-bg: rgba(18, 30, 47, 0.92);
+  --color-card-elevated: rgba(24, 39, 61, 0.94);
+  --color-heading: #eff5ff;
+  --color-text: #c2cede;
+  --color-text-light: #8da0b7;
+  --color-border: rgba(159, 183, 217, 0.18);
+  --color-overlay-soft: rgba(239, 245, 255, 0.08);
+  --color-overlay-strong: rgba(239, 245, 255, 0.14);
+  --shadow-navbar: 0 14px 36px rgba(3, 9, 17, 0.42);
+  --shadow-card: 0 18px 50px rgba(3, 9, 17, 0.38);
+  --shadow-card-hover: 0 22px 56px rgba(3, 9, 17, 0.48);
 
   font-family: var(--font-primary);
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-page-bg);
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,7 +67,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--color-white);
+  background: var(--color-page-bg);
   color: var(--color-text);
 }
 

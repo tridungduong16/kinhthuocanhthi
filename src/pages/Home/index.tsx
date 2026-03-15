@@ -212,6 +212,11 @@ export const HomePage = () => {
               Chúng tôi chỉ đưa ra một số nhóm giải pháp tiêu biểu để khách hàng hiểu mình
               sẽ được tư vấn gì sau bước đo mắt.
             </p>
+            <div className={styles.sectionActions}>
+              <Link to={ROUTES.FRAMES} className={styles.secondaryButton}>
+                Xem trang gọng kính
+              </Link>
+            </div>
           </div>
 
           <div className={styles.frameGrid}>

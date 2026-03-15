@@ -8,6 +8,12 @@ const highlights = [
   'Hơn 20 năm kinh nghiệm trong thăm khám và chăm sóc thị lực.',
 ]
 
+const heroFacts = [
+  'Bác sĩ chuyên khoa 2',
+  'Trưởng khoa Bệnh viện Mắt Vĩnh Long',
+  'Hơn 20 năm kinh nghiệm',
+]
+
 export const DoctorPage = () => {
   return (
     <div className={styles.page}>
@@ -25,15 +31,33 @@ export const DoctorPage = () => {
                 Bác sĩ Nguyễn Anh Thi là bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt
                 Vĩnh Long với hơn 20 năm kinh nghiệm trong khám, tư vấn và chăm sóc sức khỏe mắt.
               </p>
+              <div className={styles.factList}>
+                {heroFacts.map((fact) => (
+                  <span key={fact} className={styles.factChip}>
+                    {fact}
+                  </span>
+                ))}
+              </div>
               <div className={styles.actions}>
                 <a href="#thong-tin" className={styles.secondaryButton}>
                   Xem hồ sơ bác sĩ
                 </a>
               </div>
             </div>
-            <div className={styles.portraitCard}>
-              <div className={styles.portraitFrame}>
-                <img src={doctorImage} alt="Bác sĩ Nguyễn Anh Thi" className={styles.portraitImage} />
+            <div className={styles.visualColumn}>
+              <div className={styles.portraitCard}>
+                <div className={styles.portraitHalo} />
+                <div className={styles.portraitFrame}>
+                  <img src={doctorImage} alt="Bác sĩ Nguyễn Anh Thi" className={styles.portraitImage} />
+                </div>
+              </div>
+              <div className={styles.credentialCard}>
+                <span className={styles.cardLabel}>Nhãn khoa</span>
+                <h3>Khám kỹ, tư vấn rõ, ưu tiên giải pháp đúng cho thị lực</h3>
+                <p>
+                  Mỗi ca thăm khám được tiếp cận theo hướng chuyên môn và dễ hiểu, giúp bệnh
+                  nhân yên tâm trước khi chọn tròng kính hay gọng kính phù hợp.
+                </p>
               </div>
             </div>
           </div>

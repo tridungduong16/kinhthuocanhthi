@@ -1,7 +1,7 @@
 .page {
   background:
-    radial-gradient(circle at top right, rgba(62, 198, 176, 0.08), transparent 22%),
-    linear-gradient(180deg, var(--color-light-bg) 0%, var(--color-white) 24%, var(--color-white) 100%);
+    radial-gradient(circle at top right, rgba(69, 203, 183, 0.14), transparent 24%),
+    linear-gradient(180deg, var(--color-page-bg-alt) 0%, var(--color-light-bg) 24%, var(--color-page-bg) 100%);
 }
 
 .hero,
@@ -17,7 +17,7 @@
 
 .hero {
   padding-top: 54rem;
-  background: linear-gradient(180deg, #f7f6f3 0%, #e8edf5 100%);
+  background: linear-gradient(180deg, #14233a 0%, var(--color-light-bg) 100%);
 }
 
 .heroGrid,
@@ -43,8 +43,8 @@
   min-height: 34rem;
   padding: 8rem 14rem;
   border-radius: 999rem;
-  background: rgba(62, 198, 176, 0.14);
-  color: var(--color-primary-700);
+  background: rgba(69, 203, 183, 0.16);
+  color: var(--color-heading);
   font-size: 13rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -68,7 +68,8 @@
 }
 
 .heroActions,
-.contactActions {
+.contactActions,
+.sectionActions {
   display: flex;
   flex-wrap: wrap;
   gap: 16rem;
@@ -93,22 +94,22 @@
 }
 
 .primaryButton {
-  background: var(--color-primary-700);
+  background: var(--color-button-primary);
   color: var(--color-white);
 
   &:hover {
-    background: var(--color-primary-600);
+    background: var(--color-button-primary-hover);
     transform: translateY(-2rem);
   }
 }
 
 .secondaryButton {
-  border: 2rem solid var(--color-primary-700);
-  color: var(--color-primary-700);
+  border: 2rem solid rgba(191, 210, 237, 0.24);
+  color: var(--color-heading);
   background: transparent;
 
   &:hover {
-    background: var(--color-primary-700);
+    background: var(--color-overlay-strong);
     color: var(--color-white);
     transform: translateY(-2rem);
   }
@@ -170,7 +171,7 @@
   padding: 34rem;
   border-radius: 34rem;
   background:
-    linear-gradient(160deg, rgba(31, 54, 92, 0.96), rgba(74, 111, 165, 0.84)),
+    linear-gradient(160deg, rgba(18, 35, 58, 0.98), rgba(43, 77, 118, 0.88)),
     var(--color-primary-700);
   color: var(--color-white);
 
@@ -210,8 +211,8 @@
   min-height: 40rem;
   padding: 0 16rem;
   border-radius: 999rem;
-  background: var(--color-soft-bg);
-  color: var(--color-primary-700);
+  background: rgba(239, 245, 255, 0.08);
+  color: var(--color-heading);
   font-size: 14rem;
   font-weight: 600;
 }
@@ -227,7 +228,7 @@
   strong {
     display: block;
     font-size: 20rem;
-    color: var(--color-primary-700);
+    color: var(--color-heading);
   }
 
   span {
@@ -295,8 +296,8 @@
   width: 48rem;
   height: 48rem;
   border-radius: 16rem;
-  border: 1px solid rgba(31, 54, 92, 0.18);
-  color: var(--color-primary-700);
+  border: 1px solid rgba(191, 210, 237, 0.16);
+  color: var(--color-heading);
   font-size: 16rem;
   font-weight: 700;
 }
@@ -332,8 +333,8 @@
 .portraitCard {
   min-height: 430rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.9)),
-    var(--color-white);
+    linear-gradient(180deg, rgba(33, 50, 75, 0.9), rgba(18, 30, 47, 0.96)),
+    var(--color-card-elevated);
 }
 
 .portraitCard h2,
@@ -386,8 +387,8 @@
   min-height: 34rem;
   padding: 8rem 14rem;
   border-radius: 999rem;
-  background: rgba(31, 54, 92, 0.08);
-  color: var(--color-primary-700);
+  background: rgba(239, 245, 255, 0.08);
+  color: var(--color-heading);
   font-size: 13rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -395,14 +396,14 @@
 }
 
 .framesSection {
-  background: linear-gradient(180deg, var(--color-white) 0%, rgba(241, 244, 248, 0.64) 100%);
+  background: linear-gradient(180deg, var(--color-page-bg) 0%, var(--color-soft-bg) 100%);
 }
 
 .framePreview {
   height: 210rem;
   border-radius: 22rem;
   background:
-    linear-gradient(135deg, rgba(31, 54, 92, 0.1), rgba(62, 198, 176, 0.16)),
+    linear-gradient(135deg, rgba(18, 35, 58, 0.72), rgba(69, 203, 183, 0.14)),
     var(--color-soft-bg);
   display: flex;
   align-items: center;
@@ -415,11 +416,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 1px solid rgba(31, 54, 92, 0.14);
-    color: var(--color-primary-700);
+    border: 1px solid rgba(191, 210, 237, 0.16);
+    color: var(--color-heading);
     font-size: 30rem;
     font-weight: 700;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(9, 17, 29, 0.58);
   }
 }
 
@@ -466,13 +467,13 @@
   margin-top: 24rem;
   font-size: 14rem;
   font-weight: 700;
-  color: var(--color-primary-700);
+  color: var(--color-secondary-300);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .contactSection {
-  background: linear-gradient(180deg, rgba(247, 246, 243, 0.7) 0%, var(--color-white) 100%);
+  background: linear-gradient(180deg, rgba(22, 37, 58, 0.92) 0%, var(--color-page-bg) 100%);
 }
 
 .contactContent {
@@ -487,7 +488,7 @@
 .locationBlock {
   padding: 22rem;
   border-radius: 22rem;
-  background: var(--color-soft-bg);
+  background: rgba(239, 245, 255, 0.06);
 
   strong,
   p {

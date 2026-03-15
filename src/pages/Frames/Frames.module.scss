@@ -1,0 +1,244 @@
+.page {
+  background:
+    radial-gradient(circle at top right, rgba(69, 203, 183, 0.14), transparent 24%),
+    linear-gradient(180deg, var(--color-page-bg-alt) 0%, var(--color-light-bg) 28%, var(--color-page-bg) 100%);
+}
+
+.hero,
+.samplesSection {
+  padding: 92rem 0;
+}
+
+.hero {
+  background: linear-gradient(180deg, #14233a 0%, var(--color-light-bg) 100%);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: 40rem;
+  align-items: center;
+}
+
+.eyebrow,
+.sectionLabel,
+.panelLabel,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34rem;
+  padding: 8rem 14rem;
+  border-radius: 999rem;
+  background: rgba(69, 203, 183, 0.16);
+  color: var(--color-heading);
+  font-size: 13rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.content {
+  max-width: 560rem;
+
+  h1 {
+    margin-top: 22rem;
+    font-size: 48rem;
+    line-height: 1.15;
+  }
+}
+
+.lead,
+.sectionHeading p,
+.panelCard p,
+.copy p {
+  margin-top: 18rem;
+  font-size: 16rem;
+  color: var(--color-text);
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem;
+  margin-top: 30rem;
+}
+
+.categoryChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40rem;
+  padding: 0 16rem;
+  border-radius: 999rem;
+  background: rgba(239, 245, 255, 0.08);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-size: 14rem;
+  font-weight: 600;
+}
+
+.heroPanel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.panelCard,
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.panelCard {
+  max-width: 430rem;
+  padding: 34rem;
+  border-radius: 34rem;
+
+  h2 {
+    margin-top: 22rem;
+    font-size: 34rem;
+  }
+}
+
+.sectionHeading {
+  max-width: 760rem;
+
+  h2 {
+    margin-top: 22rem;
+    font-size: 36rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24rem;
+  margin-top: 40rem;
+}
+
+.card {
+  border-radius: 28rem;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3rem);
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+.preview {
+  position: relative;
+  height: 240rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(33, 50, 75, 0.76), rgba(18, 30, 47, 0.62)),
+    var(--color-soft-bg);
+
+  em {
+    position: absolute;
+    right: 24rem;
+    bottom: 20rem;
+    font-style: normal;
+    font-size: 14rem;
+    font-weight: 700;
+    color: var(--color-secondary-300);
+    letter-spacing: 0.08em;
+  }
+}
+
+.glasses {
+  position: relative;
+  width: 160rem;
+  height: 70rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 28rem;
+    left: 50%;
+    width: 36rem;
+    height: 6rem;
+    background: var(--color-primary-700);
+    transform: translateX(-50%);
+    border-radius: 999rem;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    width: 64rem;
+    height: 64rem;
+    border: 6rem solid var(--color-primary-300);
+    border-radius: 22rem;
+    background: rgba(239, 245, 255, 0.08);
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
+}
+
+.copy {
+  padding: 24rem 24rem 28rem;
+
+  h3 {
+    margin-top: 18rem;
+    font-size: 28rem;
+  }
+
+  strong {
+    display: block;
+    margin-top: 18rem;
+    font-size: 14rem;
+    font-weight: 700;
+    color: var(--color-secondary-300);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hero,
+  .samplesSection {
+    padding: 76rem 0;
+  }
+
+  .heroGrid,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroPanel {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero,
+  .samplesSection {
+    padding: 62rem 0;
+  }
+
+  .content h1,
+  .sectionHeading h2,
+  .panelCard h2 {
+    font-size: 36rem;
+  }
+
+  .panelCard,
+  .copy {
+    padding: 24rem;
+  }
+
+  .preview {
+    height: 210rem;
+  }
+}

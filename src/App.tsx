@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom"
 import { useApp } from "./hooks/useApp"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
+import { FloatingContact } from "./components/FloatingContact"
 import { selectAppLoaded } from "./store/features/app/selector"
 import Loader from "./components/Common/Loader"
 
@@ -25,6 +26,7 @@ function App() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingContact />
     </div>
   )
 }

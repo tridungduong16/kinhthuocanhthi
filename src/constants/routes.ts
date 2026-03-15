@@ -1,11 +1,13 @@
 export const SEGMENTS = {
   HOME: '/',
   DOCTOR: '/bac-si',
+  FRAMES: '/gong-kinh',
 } as const
 
 export const ROUTES = {
   HOME: '/',
   DOCTOR: '/bac-si',
+  FRAMES: '/gong-kinh',
 }
 
 export const NAVIGATION_ITEMS = [
@@ -13,6 +15,6 @@ export const NAVIGATION_ITEMS = [
   { label: 'Giới thiệu', href: `${ROUTES.HOME}#gioi-thieu` },
   { label: 'Bác sĩ', href: ROUTES.DOCTOR },
   { label: 'Dịch vụ', href: `${ROUTES.HOME}#dich-vu` },
-  { label: 'Gọng kính', href: `${ROUTES.HOME}#mau-kinh` },
+  { label: 'Gọng kính', href: ROUTES.FRAMES },
   { label: 'Liên hệ', href: `${ROUTES.HOME}#lien-he` },
 ]
