@@ -1,0 +1,17 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mark {
+  width: 70rem;
+  height: 70rem;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+  .mark {
+    width: 56rem;
+    height: 56rem;
+  }
+}

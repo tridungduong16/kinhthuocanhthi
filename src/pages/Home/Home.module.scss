@@ -1,0 +1,617 @@
+.page {
+  background:
+    radial-gradient(circle at top right, rgba(62, 198, 176, 0.08), transparent 22%),
+    linear-gradient(180deg, var(--color-light-bg) 0%, var(--color-white) 24%, var(--color-white) 100%);
+}
+
+.hero,
+.introSection,
+.doctorTeaserSection,
+.servicesSection,
+.framesSection,
+.whySection,
+.reviewsSection,
+.contactSection {
+  padding: 96rem 0;
+}
+
+.hero {
+  padding-top: 54rem;
+  background: linear-gradient(180deg, #f7f6f3 0%, #e8edf5 100%);
+}
+
+.heroGrid,
+.doctorTeaserGrid,
+.whyGrid,
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40rem;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 590rem;
+}
+
+.eyebrow,
+.sectionLabel,
+.visualTag,
+.locationLabel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34rem;
+  padding: 8rem 14rem;
+  border-radius: 999rem;
+  background: rgba(62, 198, 176, 0.14);
+  color: var(--color-primary-700);
+  font-size: 13rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin-top: 24rem;
+  font-size: 48rem;
+}
+
+.heroText,
+.sectionHeading p,
+.sectionHeadingLeft p,
+.statsText,
+.reviewQuote,
+.contactContent p {
+  margin-top: 18rem;
+  font-size: 16rem;
+  color: var(--color-text);
+}
+
+.heroActions,
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+  margin-top: 32rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48rem;
+  padding: 12rem 22rem;
+  border-radius: 10rem;
+  font-size: 15rem;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.primaryButton {
+  background: var(--color-primary-700);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-primary-600);
+    transform: translateY(-2rem);
+  }
+}
+
+.secondaryButton {
+  border: 2rem solid var(--color-primary-700);
+  color: var(--color-primary-700);
+  background: transparent;
+
+  &:hover {
+    background: var(--color-primary-700);
+    color: var(--color-white);
+    transform: translateY(-2rem);
+  }
+}
+
+.heroHighlights {
+  display: grid;
+  gap: 12rem;
+  margin-top: 28rem;
+
+  li {
+    position: relative;
+    padding-left: 26rem;
+    font-size: 15rem;
+    color: var(--color-text);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8rem;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: var(--color-accent-500);
+      box-shadow: 0 0 0 6rem rgba(62, 198, 176, 0.14);
+    }
+  }
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 560rem;
+}
+
+.visualCardLarge,
+.visualCardSmall,
+.metricCard,
+.infoCard,
+.serviceCard,
+.frameCard,
+.advantageCard,
+.reviewCard,
+.locationCard,
+.statCard,
+.portraitCard,
+.statsPanel {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.visualCardLarge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(100%, 470rem);
+  min-height: 360rem;
+  padding: 34rem;
+  border-radius: 34rem;
+  background:
+    linear-gradient(160deg, rgba(31, 54, 92, 0.96), rgba(74, 111, 165, 0.84)),
+    var(--color-primary-700);
+  color: var(--color-white);
+
+  h2 {
+    margin-top: 18rem;
+    font-size: 34rem;
+    color: var(--color-white);
+  }
+
+  p {
+    margin-top: 16rem;
+    font-size: 16rem;
+    color: rgba(255, 255, 255, 0.82);
+  }
+}
+
+.visualTag {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--color-white);
+}
+
+.visualCardSmall {
+  position: absolute;
+  right: 0;
+  bottom: 70rem;
+  width: 290rem;
+  padding: 24rem;
+  border-radius: 26rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem;
+}
+
+.visualChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40rem;
+  padding: 0 16rem;
+  border-radius: 999rem;
+  background: var(--color-soft-bg);
+  color: var(--color-primary-700);
+  font-size: 14rem;
+  font-weight: 600;
+}
+
+.metricCard {
+  position: absolute;
+  left: 80rem;
+  bottom: 0;
+  width: 250rem;
+  padding: 22rem;
+  border-radius: 22rem;
+
+  strong {
+    display: block;
+    font-size: 20rem;
+    color: var(--color-primary-700);
+  }
+
+  span {
+    display: block;
+    margin-top: 8rem;
+    font-size: 14rem;
+    color: var(--color-text-light);
+  }
+}
+
+.sectionHeading,
+.sectionHeadingLeft {
+  max-width: 760rem;
+}
+
+.sectionHeading h2,
+.sectionHeadingLeft h2 {
+  margin-top: 22rem;
+  font-size: 36rem;
+}
+
+.introGrid,
+.serviceGrid,
+.frameGrid,
+.reviewGrid,
+.statsGrid {
+  display: grid;
+  gap: 24rem;
+  margin-top: 40rem;
+}
+
+.introGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.serviceGrid,
+.frameGrid,
+.reviewGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.infoCard,
+.serviceCard,
+.frameCard,
+.advantageCard,
+.reviewCard,
+.statCard {
+  border-radius: 24rem;
+  padding: 28rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3rem);
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+.cardNumber,
+.serviceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 16rem;
+  border: 1px solid rgba(31, 54, 92, 0.18);
+  color: var(--color-primary-700);
+  font-size: 16rem;
+  font-weight: 700;
+}
+
+.infoCard h3,
+.serviceCard h3,
+.frameCard h3,
+.statsPanel h3 {
+  margin-top: 22rem;
+  font-size: 24rem;
+}
+
+.infoCard p,
+.serviceCard p,
+.frameCard p,
+.advantageCard p {
+  margin-top: 14rem;
+  font-size: 15rem;
+  color: var(--color-text-light);
+}
+
+.doctorTeaserSection {
+  background: var(--color-soft-bg);
+}
+
+.portraitCard,
+.doctorTeaserCard,
+.locationCard {
+  border-radius: 32rem;
+  padding: 34rem;
+}
+
+.portraitCard {
+  min-height: 430rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.9)),
+    var(--color-white);
+}
+
+.portraitCard h2,
+.contactContent h2 {
+  margin-top: 22rem;
+  font-size: 36rem;
+}
+
+.portraitCard p {
+  margin-top: 18rem;
+  font-size: 16rem;
+  color: var(--color-text);
+}
+
+.portraitBadge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28rem;
+  min-height: 46rem;
+  padding: 0 18rem;
+  border-radius: 999rem;
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  font-size: 14rem;
+  font-weight: 600;
+}
+
+.doctorTeaserCard {
+  min-height: 430rem;
+
+  h3 {
+    margin-top: 22rem;
+    font-size: 30rem;
+  }
+
+  p {
+    margin-top: 18rem;
+    font-size: 16rem;
+    color: var(--color-text);
+  }
+
+  .primaryButton {
+    margin-top: 28rem;
+  }
+}
+
+.doctorTeaserLabel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34rem;
+  padding: 8rem 14rem;
+  border-radius: 999rem;
+  background: rgba(31, 54, 92, 0.08);
+  color: var(--color-primary-700);
+  font-size: 13rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.framesSection {
+  background: linear-gradient(180deg, var(--color-white) 0%, rgba(241, 244, 248, 0.64) 100%);
+}
+
+.framePreview {
+  height: 210rem;
+  border-radius: 22rem;
+  background:
+    linear-gradient(135deg, rgba(31, 54, 92, 0.1), rgba(62, 198, 176, 0.16)),
+    var(--color-soft-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    width: 88rem;
+    height: 88rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 54, 92, 0.14);
+    color: var(--color-primary-700);
+    font-size: 30rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.frameCard h3 {
+  margin-top: 24rem;
+}
+
+.whyGrid {
+  align-items: start;
+}
+
+.advantageList {
+  display: grid;
+  gap: 18rem;
+}
+
+.advantageCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16rem;
+}
+
+.advantageDot {
+  width: 16rem;
+  height: 16rem;
+  margin-top: 6rem;
+  border-radius: 50%;
+  background: var(--color-accent-500);
+  box-shadow: 0 0 0 8rem rgba(62, 198, 176, 0.12);
+  flex-shrink: 0;
+}
+
+.reviewsSection {
+  background: var(--color-soft-bg);
+}
+
+.reviewQuote {
+  margin-top: 0;
+  color: var(--color-text);
+}
+
+.reviewName {
+  display: block;
+  margin-top: 24rem;
+  font-size: 14rem;
+  font-weight: 700;
+  color: var(--color-primary-700);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contactSection {
+  background: linear-gradient(180deg, rgba(247, 246, 243, 0.7) 0%, var(--color-white) 100%);
+}
+
+.contactContent {
+  max-width: 560rem;
+}
+
+.locationCard {
+  display: grid;
+  gap: 20rem;
+}
+
+.locationBlock {
+  padding: 22rem;
+  border-radius: 22rem;
+  background: var(--color-soft-bg);
+
+  strong,
+  p {
+    display: block;
+    margin-top: 10rem;
+    font-size: 16rem;
+  }
+
+  p {
+    color: var(--color-text-light);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hero,
+  .introSection,
+  .doctorTeaserSection,
+  .servicesSection,
+  .framesSection,
+  .whySection,
+  .reviewsSection,
+  .contactSection {
+    padding: 78rem 0;
+  }
+
+  .heroGrid,
+  .doctorTeaserGrid,
+  .whyGrid,
+  .contactGrid,
+  .introGrid,
+  .serviceGrid,
+  .frameGrid,
+  .reviewGrid,
+  .heroVisual {
+    min-height: 520rem;
+  }
+
+  .visualCardSmall {
+    right: 0;
+  }
+
+  .metricCard {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 36rem;
+  }
+
+  .hero,
+  .introSection,
+  .doctorTeaserSection,
+  .servicesSection,
+  .framesSection,
+  .whySection,
+  .reviewsSection,
+  .contactSection {
+    padding: 64rem 0;
+  }
+
+  .heroGrid,
+  .doctorTeaserGrid,
+  .whyGrid,
+  .contactGrid {
+    gap: 28rem;
+  }
+
+  .heroTitle,
+  .sectionHeading h2,
+  .sectionHeadingLeft h2,
+  .portraitCard h2,
+  .contactContent h2 {
+    font-size: 34rem;
+  }
+
+  .heroVisual {
+    min-height: auto;
+    display: grid;
+    gap: 16rem;
+  }
+
+  .visualCardLarge,
+  .visualCardSmall,
+  .metricCard {
+    position: static;
+    width: 100%;
+  }
+
+  .visualCardLarge {
+    min-height: auto;
+    padding: 28rem;
+
+    h2 {
+      font-size: 28rem;
+    }
+  }
+
+  .visualCardSmall,
+  .metricCard,
+  .portraitCard,
+  .doctorTeaserCard,
+  .locationCard {
+    padding: 24rem;
+  }
+
+  .introGrid,
+  .serviceGrid,
+  .frameGrid,
+  .reviewGrid {
+    margin-top: 32rem;
+  }
+
+  .infoCard,
+  .serviceCard,
+  .frameCard,
+  .advantageCard,
+  .reviewCard,
+  .statCard {
+    padding: 24rem;
+  }
+
+  .framePreview {
+    height: 180rem;
+  }
+}
