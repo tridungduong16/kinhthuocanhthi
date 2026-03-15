@@ -1,4 +1,6 @@
 import doctorImage from '../../../bacsi.png'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '@/constants/routes'
 import { ContainerLayout } from '@/layouts/ContainerLayout'
 import styles from './Doctor.module.scss'
 
@@ -8,10 +10,27 @@ const highlights = [
   'Hơn 20 năm kinh nghiệm trong thăm khám và chăm sóc thị lực.',
 ]
 
-const heroFacts = [
-  'Bác sĩ chuyên khoa 2',
-  'Trưởng khoa Bệnh viện Mắt Vĩnh Long',
-  'Hơn 20 năm kinh nghiệm',
+const heroFacts = ['Chuyên khoa mắt', 'Bác sĩ chuyên khoa 2', 'Hơn 20 năm kinh nghiệm']
+
+const profileBlocks = [
+  {
+    label: 'Giải thưởng và ghi nhận',
+    title: 'Thầy thuốc ưu tú, nhiều năm được công nhận Chiến sĩ thi đua',
+    description:
+      'Những ghi nhận nghề nghiệp này phản ánh quá trình cống hiến bền bỉ, năng lực chuyên môn và uy tín trong công tác khám chữa bệnh.',
+  },
+  {
+    label: 'Nền tảng đào tạo',
+    title: 'Tốt nghiệp Bác sĩ đa khoa Đại học Cần Thơ',
+    description:
+      'Đây là nền tảng học thuật ban đầu giúp xây dựng tư duy lâm sàng và khả năng tiếp cận toàn diện đối với sức khỏe người bệnh.',
+  },
+  {
+    label: 'Đào tạo chuyên sâu',
+    title: 'Bác sĩ chuyên khoa 2, tốt nghiệp chuyên khoa tại Đại học Y Dược Thành phố Hồ Chí Minh',
+    description:
+      'Quá trình đào tạo chuyên sâu giúp củng cố năng lực trong nhãn khoa, hỗ trợ thăm khám kỹ, đánh giá đúng và tư vấn phù hợp.',
+  },
 ]
 
 export const DoctorPage = () => {
@@ -22,11 +41,8 @@ export const DoctorPage = () => {
           <div className={styles.heroGrid}>
             <div className={styles.content}>
               <span className={styles.eyebrow}>Giới thiệu bác sĩ</span>
-              <h1>
-                Bác sĩ Nguyễn
-                <br />
-                Anh Thi
-              </h1>
+              <h1>Bác sĩ Nguyễn Anh Thi</h1>
+              <p className={styles.summary}>Chuyên khoa mắt, hơn 20 năm kinh nghiệm thăm khám và chăm sóc thị lực.</p>
               <p className={styles.lead}>
                 Bác sĩ Nguyễn Anh Thi là bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt
                 Vĩnh Long với hơn 20 năm kinh nghiệm trong khám, tư vấn và chăm sóc sức khỏe mắt.
@@ -39,25 +55,21 @@ export const DoctorPage = () => {
                 ))}
               </div>
               <div className={styles.actions}>
+                <Link to={ROUTES.CONTACT} className={styles.primaryButton}>
+                  Đặt lịch khám
+                </Link>
                 <a href="#thong-tin" className={styles.secondaryButton}>
                   Xem hồ sơ bác sĩ
                 </a>
               </div>
             </div>
-            <div className={styles.visualColumn}>
-              <div className={styles.portraitCard}>
-                <div className={styles.portraitHalo} />
+            <div className={styles.visualColumn} aria-hidden="true">
+              <div className={styles.visualStage}>
+                <div className={styles.backGlow} />
+                <div className={styles.floorGlow} />
                 <div className={styles.portraitFrame}>
                   <img src={doctorImage} alt="Bác sĩ Nguyễn Anh Thi" className={styles.portraitImage} />
                 </div>
-              </div>
-              <div className={styles.credentialCard}>
-                <span className={styles.cardLabel}>Nhãn khoa</span>
-                <h3>Khám kỹ, tư vấn rõ, ưu tiên giải pháp đúng cho thị lực</h3>
-                <p>
-                  Mỗi ca thăm khám được tiếp cận theo hướng chuyên môn và dễ hiểu, giúp bệnh
-                  nhân yên tâm trước khi chọn tròng kính hay gọng kính phù hợp.
-                </p>
               </div>
             </div>
           </div>
@@ -80,6 +92,16 @@ export const DoctorPage = () => {
               <article key={item} className={styles.highlightCard}>
                 <span className={styles.highlightDot} />
                 <p>{item}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className={styles.profileGrid}>
+            {profileBlocks.map((item) => (
+              <article key={item.title} className={styles.profileCard}>
+                <span className={styles.cardLabel}>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>

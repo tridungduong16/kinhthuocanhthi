@@ -73,12 +73,12 @@ export const HomePage = () => {
                 kèm đúng lúc.
               </p>
               <div className={styles.heroActions}>
-                <a href="#lien-he" className={styles.primaryButton}>
+                <Link to={ROUTES.CONTACT} className={styles.primaryButton}>
                   Đặt lịch đo mắt
-                </a>
-                <a href="#gioi-thieu" className={styles.secondaryButton}>
-                  Tìm hiểu về Anh Thi
-                </a>
+                </Link>
+                <Link to={ROUTES.DOCTOR} className={styles.secondaryButton}>
+                  Xem bác sĩ
+                </Link>
               </div>
               <ul className={styles.heroHighlights}>
                 <li>Đo khúc xạ rõ ràng và dễ hiểu</li>
@@ -293,9 +293,9 @@ export const HomePage = () => {
                 người dùng có thể hành động ngay khi đã có đủ niềm tin.
               </p>
               <div className={styles.contactActions}>
-                <a href="#trang-chu" className={styles.primaryButton}>
+                <Link to={ROUTES.CONTACT} className={styles.primaryButton}>
                   Đặt lịch đo mắt
-                </a>
+                </Link>
                 <a
                   href="https://maps.google.com/?q=85+Pham+Thai+Buong,+TP+Vinh+Long"
                   className={styles.secondaryButton}

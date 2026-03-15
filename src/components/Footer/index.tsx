@@ -15,9 +15,9 @@ export const Footer = () => {
         <div className={styles.meta}>
           <p>85 Phạm Thái Bường, TP Vĩnh Long</p>
           <div className={styles.links}>
-            <a href={`${ROUTES.HOME}#dich-vu`}>Dịch vụ</a>
+            <a href={ROUTES.SERVICES}>Dịch vụ</a>
             <a href={ROUTES.FRAMES}>Gọng kính</a>
-            <a href={`${ROUTES.HOME}#lien-he`}>Liên hệ</a>
+            <a href={ROUTES.CONTACT}>Liên hệ</a>
           </div>
         </div>
         <p className={styles.copyright}>
