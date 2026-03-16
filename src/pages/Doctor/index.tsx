@@ -15,51 +15,11 @@ const heroStats = [
 
 const timelineItems = [
   {
-    year: '1989 – 1995',
-    title: 'Tốt nghiệp Bác sĩ đa khoa YK15 — Đại học Y Dược Cần Thơ',
-    description: 'Niên khóa 1989 – 1995, lớp YK15. Nền tảng y khoa tổng quát, xây dựng tư duy lâm sàng toàn diện.',
-    image: '/images/doctor-university.jpg',
-  },
-  {
-    year: '20/10/2012',
-    title: 'Tham dự Hội nghị Nhãn khoa Toàn quốc',
+    year: '10/3/2026',
+    title: 'Tham dự Giỗ tổ ngành Mắt kính lần thứ 32',
     description:
-      'Tham dự hội nghị chuyên ngành nhãn khoa toàn quốc để cập nhật kiến thức, trao đổi kinh nghiệm và kết nối chuyên môn với đồng nghiệp trong cả nước.',
-    image: nationalOphthalmologyConferenceImage,
-  },
-  {
-    year: '01/06/2014',
-    title: 'Nhận bằng Bác sĩ chuyên khoa 2 — Đại học Y Dược TP.HCM',
-    description:
-      'Ngày 01/06/2014, hoàn thành chương trình đào tạo chuyên sâu và nhận bằng Bác sĩ chuyên khoa 2 tại Đại học Y Dược TP.HCM.',
-    image: '/images/doctor-graduation.jpg',
-  },
-  {
-    year: '02/2018',
-    title: 'Hội nghị Nhãn khoa tại Hong Kong',
-    description:
-      'Tham dự hội nghị nhãn khoa tại Hong Kong vào tháng 02/2018 để cập nhật xu hướng chuyên môn, mở rộng kết nối học thuật và trao đổi kinh nghiệm quốc tế.',
-    image: hongKongConferenceImage,
-  },
-  {
-    year: 'Công tác',
-    title: 'Trưởng khoa Bệnh viện Mắt Vĩnh Long',
-    description: 'Hơn 30 năm gắn bó với nhãn khoa, trực tiếp thăm khám và hướng dẫn chuyên môn cho đội ngũ y bác sĩ.',
-    image: '',
-  },
-  {
-    year: '28/02/2025',
-    title: 'Nhận bằng khen của Chủ tịch UBND tỉnh Vĩnh Long',
-    description:
-      'Ngày 28/02/2025, vinh dự được trao bằng khen của Chủ tịch UBND tỉnh Vĩnh Long nhằm ghi nhận quá trình cống hiến trong công tác khám chữa bệnh.',
-    image: '/images/doctor-award.png',
-  },
-  {
-    year: '15/11/2025',
-    title: 'Hội nghị ngành Nhãn khoa Việt Nam (VIETCAN) tại Đà Nẵng',
-    description:
-      'Tham dự Hội nghị ngành Nhãn khoa Việt Nam tại Đà Nẵng, cập nhật kiến thức chuyên môn và trao đổi kinh nghiệm với đồng nghiệp trên cả nước.',
-    image: '/images/doctor-danang.jpg',
+      'Ngày 10/3/2026, tham dự Giỗ tổ ngành Mắt kính lần thứ 32, một sự kiện truyền thống nhằm tôn vinh nghề nghiệp và kết nối cộng đồng chuyên môn.',
+    image: '/images/doctor-gioto.jpg',
   },
   {
     year: '27/02/2026',
@@ -69,11 +29,51 @@ const timelineItems = [
     image: '/bangkhenngaythaythuoc.JPG',
   },
   {
-    year: '10/3/2026',
-    title: 'Tham dự Giỗ tổ ngành Mắt kính lần thứ 32',
+    year: '15/11/2025',
+    title: 'Hội nghị ngành Nhãn khoa Việt Nam (VIETCAN) tại Đà Nẵng',
     description:
-      'Ngày 10/3/2026, tham dự Giỗ tổ ngành Mắt kính lần thứ 32, một sự kiện truyền thống nhằm tôn vinh nghề nghiệp và kết nối cộng đồng chuyên môn.',
-    image: '/images/doctor-gioto.jpg',
+      'Tham dự Hội nghị ngành Nhãn khoa Việt Nam tại Đà Nẵng, cập nhật kiến thức chuyên môn và trao đổi kinh nghiệm với đồng nghiệp trên cả nước.',
+    image: '/images/doctor-danang.jpg',
+  },
+  {
+    year: '28/02/2025',
+    title: 'Nhận bằng khen của Chủ tịch UBND tỉnh Vĩnh Long',
+    description:
+      'Ngày 28/02/2025, vinh dự được trao bằng khen của Chủ tịch UBND tỉnh Vĩnh Long nhằm ghi nhận quá trình cống hiến trong công tác khám chữa bệnh.',
+    image: '/images/doctor-award.png',
+  },
+  {
+    year: 'Công tác',
+    title: 'Trưởng khoa Bệnh viện Mắt Vĩnh Long',
+    description: 'Hơn 30 năm gắn bó với nhãn khoa, trực tiếp thăm khám và hướng dẫn chuyên môn cho đội ngũ y bác sĩ.',
+    image: '/images/doctor-congtac.jpg',
+  },
+  {
+    year: '02/2018',
+    title: 'Hội nghị Nhãn khoa tại Hong Kong',
+    description:
+      'Tham dự hội nghị nhãn khoa tại Hong Kong vào tháng 02/2018 để cập nhật xu hướng chuyên môn, mở rộng kết nối học thuật và trao đổi kinh nghiệm quốc tế.',
+    image: hongKongConferenceImage,
+  },
+  {
+    year: '01/06/2014',
+    title: 'Nhận bằng Bác sĩ chuyên khoa 2 — Đại học Y Dược TP.HCM',
+    description:
+      'Ngày 01/06/2014, hoàn thành chương trình đào tạo chuyên sâu và nhận bằng Bác sĩ chuyên khoa 2 tại Đại học Y Dược TP.HCM.',
+    image: '/images/doctor-graduation.jpg',
+  },
+  {
+    year: '20/10/2012',
+    title: 'Tham dự Hội nghị Nhãn khoa Toàn quốc',
+    description:
+      'Tham dự hội nghị chuyên ngành nhãn khoa toàn quốc để cập nhật kiến thức, trao đổi kinh nghiệm và kết nối chuyên môn với đồng nghiệp trong cả nước.',
+    image: nationalOphthalmologyConferenceImage,
+  },
+  {
+    year: '1989 – 1995',
+    title: 'Tốt nghiệp Bác sĩ đa khoa YK15 — Đại học Y Dược Cần Thơ',
+    description: 'Niên khóa 1989 – 1995, lớp YK15. Nền tảng y khoa tổng quát, xây dựng tư duy lâm sàng toàn diện.',
+    image: '/images/doctor-university.jpg',
   },
 ]
 
