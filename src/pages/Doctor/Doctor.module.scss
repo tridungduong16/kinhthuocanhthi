@@ -356,8 +356,8 @@
 
 .timelineCardWithImage {
   display: grid;
-  grid-template-columns: 200rem 1fr;
-  gap: 24rem;
+  grid-template-columns: 280rem 1fr;
+  gap: 28rem;
   align-items: center;
 }
 
@@ -389,11 +389,11 @@
 }
 
 .timelineImage {
-  width: 200rem;
-  height: 200rem;
+  width: 280rem;
+  height: 240rem;
   object-fit: cover;
   object-position: top;
-  border-radius: 16rem;
+  border-radius: 18rem;
   flex-shrink: 0;
 }
 
