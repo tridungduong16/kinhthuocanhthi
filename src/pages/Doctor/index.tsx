@@ -38,16 +38,31 @@ const profileBlocks = [
   },
 ]
 
-const galleryItems = [
-  { label: 'Khám thị lực', note: 'Không gian thăm khám và tư vấn chuyên môn' },
-  { label: 'Tư vấn bệnh nhân', note: 'Giải thích kết quả rõ ràng, dễ hiểu' },
-  { label: 'Hoạt động chuyên môn', note: 'Gắn với công tác bệnh viện và cộng đồng' },
-]
-
-const activityItems = [
-  'Tham gia thăm khám, tư vấn và theo dõi sức khỏe mắt cho nhiều nhóm bệnh nhân khác nhau.',
-  'Đồng hành trong các hoạt động chuyên môn tại Bệnh viện Mắt Vĩnh Long.',
-  'Đóng góp vào công tác đào tạo, hướng dẫn và nâng cao chất lượng chăm sóc thị lực.',
+const timelineItems = [
+  {
+    year: 'Đại học',
+    title: 'Tốt nghiệp Bác sĩ đa khoa — Đại học Cần Thơ',
+    description: 'Nền tảng y khoa tổng quát, xây dựng tư duy lâm sàng toàn diện.',
+    image: '',
+  },
+  {
+    year: 'Chuyên khoa',
+    title: 'Nhận bằng Bác sĩ chuyên khoa 2 — Đại học Y Dược TP.HCM',
+    description: 'Đào tạo chuyên sâu về nhãn khoa, củng cố năng lực thăm khám và phẫu thuật mắt.',
+    image: '/images/doctor-graduation.jpg',
+  },
+  {
+    year: 'Công tác',
+    title: 'Trưởng khoa Bệnh viện Mắt Vĩnh Long',
+    description: 'Hơn 20 năm gắn bó với nhãn khoa, trực tiếp thăm khám và hướng dẫn chuyên môn cho đội ngũ y bác sĩ.',
+    image: '',
+  },
+  {
+    year: 'Ghi nhận',
+    title: 'Danh hiệu Thầy thuốc ưu tú, Chiến sĩ thi đua',
+    description: 'Được ghi nhận qua quá trình cống hiến bền bỉ và uy tín trong công tác khám chữa bệnh.',
+    image: '',
+  },
 ]
 
 export const DoctorPage = () => {
@@ -152,41 +167,40 @@ export const DoctorPage = () => {
             </article>
           </div>
 
-          <section className={styles.gallerySection}>
+          <section className={styles.timelineSection}>
             <div className={styles.sectionHeading}>
-              <span className={styles.sectionLabel}>Hình ảnh và hoạt động</span>
-              <h2>Một góc nhìn trực quan về quá trình thăm khám và công tác chuyên môn</h2>
+              <span className={styles.sectionLabel}>Quá trình công tác</span>
+              <h2>Hành trình chuyên môn của bác sĩ Nguyễn Anh Thi</h2>
               <p>
-                Khu vực này có thể dùng để bổ sung ảnh thật sau này. Hiện tại được thiết kế
-                như một phần gallery nhẹ để giữ nhịp bố cục và làm rõ tính chuyên môn.
+                Từ nền tảng y khoa tổng quát đến chuyên khoa nhãn khoa, mỗi giai đoạn
+                đều góp phần xây dựng năng lực thăm khám và tư vấn cho bệnh nhân.
               </p>
             </div>
 
-            <div className={styles.galleryGrid}>
-              <div className={styles.galleryWall}>
-                {galleryItems.map((item, index) => (
-                  <article key={item.label} className={styles.galleryCard}>
-                    <div className={styles.galleryPreview}>
-                      <span>0{index + 1}</span>
-                    </div>
-                    <strong>{item.label}</strong>
-                    <p>{item.note}</p>
-                  </article>
-                ))}
-              </div>
-
-              <div className={styles.activityPanel}>
-                <span className={styles.cardLabel}>Hoạt động nổi bật</span>
-                <h3>Chuyên môn không chỉ thể hiện qua bằng cấp mà còn ở quá trình làm nghề</h3>
-                <div className={styles.activityList}>
-                  {activityItems.map((item) => (
-                    <article key={item} className={styles.activityCard}>
-                      <span className={styles.activityDot} />
-                      <p>{item}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
+            <div className={styles.timeline}>
+              <div className={styles.timelineLine} aria-hidden="true" />
+              {timelineItems.map((item, index) => (
+                <article
+                  key={item.title}
+                  className={`${styles.timelineItem} ${index % 2 === 1 ? styles.timelineItemRight : ''}`}
+                >
+                  <div className={styles.timelineDot} aria-hidden="true">
+                    <span>{index + 1}</span>
+                  </div>
+                  <div className={styles.timelineCard}>
+                    <span className={styles.timelineYear}>{item.year}</span>
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className={styles.timelineImage}
+                      />
+                    )}
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </section>
         </ContainerLayout>

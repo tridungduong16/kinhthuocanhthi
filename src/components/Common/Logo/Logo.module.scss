@@ -1,17 +1,22 @@
 .logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
   display: inline-flex;
   align-items: center;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .mark {
-  width: 70rem;
-  height: 70rem;
+  width: 184rem;
+  height: 184rem;
   object-fit: contain;
 }
 
 @media screen and (max-width: 767px) {
   .mark {
-    width: 56rem;
-    height: 56rem;
+    width: 136rem;
+    height: 136rem;
   }
 }

@@ -27,10 +27,22 @@ const services = [
 ]
 
 const featuredFrames = [
-  'Kính cận mỏng nhẹ cho học tập và văn phòng',
-  'Kính viễn cho người cần hỗ trợ nhìn xa',
-  'Kính loạn tối ưu tầm nhìn cân bằng',
-  'Kính chống ánh sáng xanh cho người dùng màn hình',
+  {
+    title: 'Kính cận mỏng nhẹ',
+    description: 'Phù hợp cho học sinh, sinh viên và người làm văn phòng cần đeo kính cả ngày.',
+  },
+  {
+    title: 'Kính viễn và lão thị',
+    description: 'Hỗ trợ nhìn xa hoặc đọc sách cho người trung niên và lớn tuổi.',
+  },
+  {
+    title: 'Kính loạn thị',
+    description: 'Tròng kính được đo và cắt chính xác, giúp tầm nhìn cân bằng và thoải mái.',
+  },
+  {
+    title: 'Kính chống ánh sáng xanh',
+    description: 'Giảm mỏi mắt cho người thường xuyên sử dụng máy tính và điện thoại.',
+  },
 ]
 
 const advantages = [
@@ -89,11 +101,11 @@ export const HomePage = () => {
 
             <div className={styles.heroVisual} aria-hidden="true">
               <div className={styles.visualCardLarge}>
-                <span className={styles.visualTag}>Consultation Room</span>
-                <h2>Bác sĩ đo mắt, bệnh nhân được hướng dẫn kỹ về thị lực</h2>
+                <span className={styles.visualTag}>Phòng đo mắt</span>
+                <h2>Đo mắt chính xác, tư vấn tận tâm từ bác sĩ chuyên khoa</h2>
                 <p>
-                  Bố cục được thiết kế theo tinh thần medical clean, tạo cảm giác yên tâm
-                  và chuyên nghiệp ngay từ hero section.
+                  Mỗi lần đo mắt tại Anh Thi, bạn sẽ được bác sĩ giải thích rõ ràng
+                  về tình trạng thị lực và hướng xử lý phù hợp nhất.
                 </p>
               </div>
               <div className={styles.visualCardSmall}>
@@ -114,7 +126,7 @@ export const HomePage = () => {
         <ContainerLayout>
           <div className={styles.sectionHeading}>
             <span className={styles.sectionLabel}>Giới thiệu</span>
-            <h2>Không chỉ bán kính, chúng tôi giúp bạn nhìn rõ hơn mỗi ngày</h2>
+            <h2>Chăm sóc thị lực trước, chọn kính sau</h2>
             <p>
               Kính Thuốc Anh Thi là địa chỉ đo mắt và tư vấn thị lực tại Vĩnh Long, phục
               vụ từ học sinh, nhân viên văn phòng đến người cần theo dõi thị lực định kỳ.
@@ -135,16 +147,16 @@ export const HomePage = () => {
               <span className={styles.cardNumber}>02</span>
               <h3>Chuyên môn để tạo niềm tin</h3>
               <p>
-                Định hướng nội dung và không gian theo phong cách phòng khám mắt hiện đại,
-                giúp website truyền tải sự chuyên nghiệp và sự chăm sóc.
+                Bác sĩ chuyên khoa trực tiếp tham gia quy trình đo mắt và tư vấn,
+                mang đến sự an tâm cho khách hàng ở mọi lứa tuổi.
               </p>
             </article>
             <article className={styles.infoCard}>
               <span className={styles.cardNumber}>03</span>
-              <h3>Dịch vụ kính là phần bổ trợ</h3>
+              <h3>Kính đi kèm giải pháp</h3>
               <p>
-                Kính được giới thiệu như một giải pháp sau tư vấn, thay vì cảm giác đây là
-                một trang thương mại thuần túy.
+                Kính được chọn sau khi hiểu rõ tình trạng mắt, không phải chọn trước rồi
+                mới đo. Đảm bảo đúng độ, phù hợp nhu cầu sử dụng thực tế.
               </p>
             </article>
           </div>
@@ -156,21 +168,20 @@ export const HomePage = () => {
           <div className={styles.doctorTeaserGrid}>
             <div className={styles.portraitCard}>
               <span className={styles.sectionLabel}>Chuyên môn</span>
-              <h2>Bác sĩ Nguyễn Anh Thi là nền tảng chuyên môn của Kính Thuốc Anh Thi</h2>
+              <h2>Bác sĩ Nguyễn Anh Thi</h2>
               <p>
-                Bác sĩ Nguyễn Anh Thi là bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt
-                Vĩnh Long với hơn 20 năm kinh nghiệm. Trang bác sĩ riêng sẽ giúp người xem
-                thấy rõ hơn về nền tảng chuyên môn và lý do nên đặt niềm tin.
+                Bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt Vĩnh Long với hơn 20 năm
+                kinh nghiệm trong lĩnh vực nhãn khoa.
               </p>
               <div className={styles.portraitBadge}>Bác sĩ chuyên khoa 2 • Hơn 20 năm kinh nghiệm</div>
             </div>
 
             <article className={styles.doctorTeaserCard}>
               <span className={styles.doctorTeaserLabel}>Trang riêng</span>
-              <h3>Giới thiệu chi tiết về bác sĩ</h3>
+              <h3>Tìm hiểu thêm về bác sĩ</h3>
               <p>
-                Tách riêng một page giúp tăng độ tin cậy cho thương hiệu clinic-first, đồng
-                thời tạo chỗ để bổ sung ảnh thật, quá trình công tác và định hướng chuyên môn.
+                Xem quá trình công tác, chuyên môn và định hướng chăm sóc thị lực
+                của bác sĩ Nguyễn Anh Thi tại trang riêng.
               </p>
               <Link to={ROUTES.DOCTOR} className={styles.primaryButton}>
                 Xem trang bác sĩ
@@ -184,10 +195,10 @@ export const HomePage = () => {
         <ContainerLayout>
           <div className={styles.sectionHeading}>
             <span className={styles.sectionLabel}>Dịch vụ</span>
-            <h2>Dịch vụ khám mắt và hỗ trợ thị lực được trình bày đơn giản, dễ tin</h2>
+            <h2>Quy trình chăm sóc thị lực tại Anh Thi</h2>
             <p>
-              Website được sắp xếp như một clinic landing page: icon outline, copy gọn và
-              nhấn mạnh vào lợi ích sức khỏe thị lực thay vì bán hàng quá đà.
+              Từ bước đo mắt đầu tiên đến khi nhận kính, mỗi bước đều được giải thích
+              rõ ràng để bạn hiểu mình đang được hỗ trợ những gì.
             </p>
           </div>
 
@@ -207,10 +218,10 @@ export const HomePage = () => {
         <ContainerLayout>
           <div className={styles.sectionHeading}>
             <span className={styles.sectionLabel}>Mẫu kính</span>
-            <h2>Mẫu kính được giới thiệu có chọn lọc, không biến landing thành shop online</h2>
+            <h2>Một số giải pháp kính tiêu biểu</h2>
             <p>
-              Chúng tôi chỉ đưa ra một số nhóm giải pháp tiêu biểu để khách hàng hiểu mình
-              sẽ được tư vấn gì sau bước đo mắt.
+              Dưới đây là các nhóm kính phổ biến mà khách hàng thường được tư vấn sau khi đo mắt.
+              Mẫu kính chi tiết hơn có tại trang gọng kính.
             </p>
             <div className={styles.sectionActions}>
               <Link to={ROUTES.FRAMES} className={styles.secondaryButton}>
@@ -221,15 +232,12 @@ export const HomePage = () => {
 
           <div className={styles.frameGrid}>
             {featuredFrames.map((item, index) => (
-              <article key={item} className={styles.frameCard}>
+              <article key={item.title} className={styles.frameCard}>
                 <div className={styles.framePreview}>
                   <span>{index + 1}</span>
                 </div>
-                <h3>{item}</h3>
-                <p>
-                  Gợi ý theo nhu cầu sử dụng và tình trạng thị lực, giúp chọn đúng tròng
-                  kính và kiểu gọng thay vì chỉ nhìn vào giá.
-                </p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
@@ -241,10 +249,10 @@ export const HomePage = () => {
           <div className={styles.whyGrid}>
             <div className={styles.sectionHeadingLeft}>
               <span className={styles.sectionLabel}>Vì sao chọn Anh Thi</span>
-              <h2>Cảm giác tin cậy đến từ từng điểm chạm nhỏ</h2>
+              <h2>Sự tin cậy đến từ cách chúng tôi làm việc</h2>
               <p>
-                Palette navy, mint và nền sáng giúp website vừa sạch sẽ như phòng khám, vừa
-                giữ được độ premium của một cửa hàng kính chất lượng.
+                Không chỉ là lời nói, mà là quy trình rõ ràng, không gian chuyên nghiệp
+                và sự chăm sóc mà bạn cảm nhận được ngay từ lần đầu ghé thăm.
               </p>
             </div>
 
@@ -264,10 +272,10 @@ export const HomePage = () => {
         <ContainerLayout>
           <div className={styles.sectionHeading}>
             <span className={styles.sectionLabel}>Đánh giá khách hàng</span>
-            <h2>Review thật tạo trust thay cho những câu bán hàng lớn</h2>
+            <h2>Khách hàng nói gì về Anh Thi</h2>
             <p>
-              Phần này được thiết kế để ưu tiên sự chân thật. Khi bổ sung ảnh thật sau này,
-              mức độ tin cậy của landing sẽ tăng lên rõ rệt.
+              Những chia sẻ thực tế từ khách hàng đã sử dụng dịch vụ đo mắt
+              và làm kính tại cửa hàng.
             </p>
           </div>
 
@@ -289,8 +297,8 @@ export const HomePage = () => {
               <span className={styles.sectionLabel}>Liên hệ</span>
               <h2>Đặt lịch đo mắt và ghé thăm cửa hàng tại TP Vĩnh Long</h2>
               <p>
-                Đây là section chốt CTA, kết hợp địa chỉ, hướng đi và các kênh liên hệ để
-                người dùng có thể hành động ngay khi đã có đủ niềm tin.
+                Liên hệ trực tiếp hoặc đặt lịch trước để được phục vụ nhanh hơn.
+                Cửa hàng nằm tại trung tâm TP Vĩnh Long, dễ tìm và có chỗ đậu xe.
               </p>
               <div className={styles.contactActions}>
                 <Link to={ROUTES.CONTACT} className={styles.primaryButton}>
