@@ -6,10 +6,13 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Logo />
+        <div className={styles.brand}>
+          <Logo />
+        </div>
         <div className={styles.actions}>
           <Navigation />
         </div>
+        <div className={styles.spacer} aria-hidden="true" />
       </div>
     </header>
   )

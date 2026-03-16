@@ -1,4 +1,3 @@
-import doctorImage from '../../../bacsi.png'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '@/constants/routes'
 import { ContainerLayout } from '@/layouts/ContainerLayout'
@@ -11,6 +10,12 @@ const highlights = [
 ]
 
 const heroFacts = ['Chuyên khoa mắt', 'Bác sĩ chuyên khoa 2', 'Hơn 20 năm kinh nghiệm']
+
+const heroStats = [
+  { value: '20+', label: 'năm kinh nghiệm thăm khám và chăm sóc thị lực' },
+  { value: 'CKII', label: 'bác sĩ chuyên khoa 2 với nền tảng đào tạo chuyên sâu' },
+  { value: 'Ưu tú', label: 'ghi nhận nghề nghiệp qua danh hiệu Thầy thuốc ưu tú' },
+]
 
 const profileBlocks = [
   {
@@ -31,6 +36,18 @@ const profileBlocks = [
     description:
       'Quá trình đào tạo chuyên sâu giúp củng cố năng lực trong nhãn khoa, hỗ trợ thăm khám kỹ, đánh giá đúng và tư vấn phù hợp.',
   },
+]
+
+const galleryItems = [
+  { label: 'Khám thị lực', note: 'Không gian thăm khám và tư vấn chuyên môn' },
+  { label: 'Tư vấn bệnh nhân', note: 'Giải thích kết quả rõ ràng, dễ hiểu' },
+  { label: 'Hoạt động chuyên môn', note: 'Gắn với công tác bệnh viện và cộng đồng' },
+]
+
+const activityItems = [
+  'Tham gia thăm khám, tư vấn và theo dõi sức khỏe mắt cho nhiều nhóm bệnh nhân khác nhau.',
+  'Đồng hành trong các hoạt động chuyên môn tại Bệnh viện Mắt Vĩnh Long.',
+  'Đóng góp vào công tác đào tạo, hướng dẫn và nâng cao chất lượng chăm sóc thị lực.',
 ]
 
 export const DoctorPage = () => {
@@ -63,14 +80,24 @@ export const DoctorPage = () => {
                 </a>
               </div>
             </div>
-            <div className={styles.visualColumn} aria-hidden="true">
-              <div className={styles.visualStage}>
-                <div className={styles.backGlow} />
-                <div className={styles.floorGlow} />
-                <div className={styles.portraitFrame}>
-                  <img src={doctorImage} alt="Bác sĩ Nguyễn Anh Thi" className={styles.portraitImage} />
+            <div className={styles.visualColumn}>
+              <article className={styles.heroPanel}>
+                <span className={styles.cardLabel}>Hồ sơ chuyên môn</span>
+                <h2>Nền tảng chuyên môn rõ ràng để người bệnh an tâm ngay từ lần đầu</h2>
+                <p>
+                  Bác sĩ Nguyễn Anh Thi là bác sĩ chuyên khoa 2, giữ vai trò Trưởng khoa tại
+                  Bệnh viện Mắt Vĩnh Long, đồng thời được ghi nhận qua các danh hiệu và thành
+                  tích nghề nghiệp nổi bật.
+                </p>
+                <div className={styles.heroStatGrid}>
+                  {heroStats.map((item) => (
+                    <article key={item.label} className={styles.heroStatCard}>
+                      <strong>{item.value}</strong>
+                      <span>{item.label}</span>
+                    </article>
+                  ))}
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </ContainerLayout>
@@ -124,6 +151,44 @@ export const DoctorPage = () => {
               </p>
             </article>
           </div>
+
+          <section className={styles.gallerySection}>
+            <div className={styles.sectionHeading}>
+              <span className={styles.sectionLabel}>Hình ảnh và hoạt động</span>
+              <h2>Một góc nhìn trực quan về quá trình thăm khám và công tác chuyên môn</h2>
+              <p>
+                Khu vực này có thể dùng để bổ sung ảnh thật sau này. Hiện tại được thiết kế
+                như một phần gallery nhẹ để giữ nhịp bố cục và làm rõ tính chuyên môn.
+              </p>
+            </div>
+
+            <div className={styles.galleryGrid}>
+              <div className={styles.galleryWall}>
+                {galleryItems.map((item, index) => (
+                  <article key={item.label} className={styles.galleryCard}>
+                    <div className={styles.galleryPreview}>
+                      <span>0{index + 1}</span>
+                    </div>
+                    <strong>{item.label}</strong>
+                    <p>{item.note}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className={styles.activityPanel}>
+                <span className={styles.cardLabel}>Hoạt động nổi bật</span>
+                <h3>Chuyên môn không chỉ thể hiện qua bằng cấp mà còn ở quá trình làm nghề</h3>
+                <div className={styles.activityList}>
+                  {activityItems.map((item) => (
+                    <article key={item} className={styles.activityCard}>
+                      <span className={styles.activityDot} />
+                      <p>{item}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
         </ContainerLayout>
       </section>
     </div>

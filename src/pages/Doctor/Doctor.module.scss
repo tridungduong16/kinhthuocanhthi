@@ -78,8 +78,8 @@
 }
 
 .factChip {
-  background: rgba(244, 248, 251, 0.88);
-  border: 1px solid var(--color-border);
+  background: rgba(69, 203, 183, 0.12);
+  border: 1px solid rgba(69, 203, 183, 0.28);
   color: var(--color-heading);
   text-transform: none;
   letter-spacing: 0;
@@ -120,12 +120,12 @@
 }
 
 .secondaryButton {
-  border: 2rem solid rgba(31, 54, 92, 0.16);
+  border: 2rem solid rgba(69, 203, 183, 0.34);
   color: var(--color-heading);
-  background: rgba(244, 248, 251, 0.9);
+  background: rgba(69, 203, 183, 0.1);
 
   &:hover {
-    background: var(--color-heading);
+    background: rgba(69, 203, 183, 0.2);
     color: var(--color-white);
     transform: translateY(-2rem);
   }
@@ -133,7 +133,12 @@
 
 .highlightCard,
 .storyCard,
-.profileCard {
+.profileCard,
+.heroPanel,
+.heroStatCard,
+.galleryCard,
+.activityPanel,
+.activityCard {
   background: var(--color-card-bg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
@@ -141,51 +146,50 @@
 
 .visualColumn {
   position: relative;
-  min-height: 760rem;
-}
-
-.visualStage {
-  position: relative;
-  height: 100%;
-  min-height: 760rem;
-}
-
-.backGlow {
-  position: absolute;
-  inset: 6% 2% 22% 10%;
-  border-radius: 48rem;
-  background:
-    radial-gradient(circle at 35% 30%, rgba(232, 240, 246, 0.92), rgba(232, 240, 246, 0.45) 34%, transparent 70%),
-    linear-gradient(180deg, rgba(244, 248, 251, 0.72), rgba(232, 240, 246, 0.22));
-  filter: blur(8rem);
-}
-
-.floorGlow {
-  position: relative;
-  position: absolute;
-  left: 18%;
-  right: 10%;
-  bottom: 2%;
-  height: 84rem;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(31, 54, 92, 0.18) 0%, rgba(31, 54, 92, 0.08) 28%, transparent 72%);
-  filter: blur(6rem);
-}
-
-.portraitFrame {
-  position: absolute;
-  inset: 0 0 0 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
 }
 
-.portraitImage {
-  width: auto;
-  height: 80%;
-  object-fit: contain;
-  object-position: center bottom;
-  filter: drop-shadow(0 30rem 40rem rgba(0, 0, 0, 0.35));
+.heroPanel {
+  width: 100%;
+  padding: 34rem;
+  border-radius: 34rem;
+}
+
+.heroPanel h2 {
+  margin-top: 20rem;
+  font-size: 34rem;
+}
+
+.heroPanel p {
+  margin-top: 18rem;
+  font-size: 16rem;
+  color: var(--color-text);
+}
+
+.heroStatGrid {
+  display: grid;
+  gap: 16rem;
+  margin-top: 28rem;
+}
+
+.heroStatCard {
+  padding: 22rem 24rem;
+  border-radius: 22rem;
+
+  strong {
+    display: block;
+    font-size: 30rem;
+    color: var(--color-heading);
+  }
+
+  span {
+    display: block;
+    margin-top: 10rem;
+    font-size: 14rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
 }
 
 .sectionHeading {
@@ -252,6 +256,105 @@
   }
 }
 
+.gallerySection {
+  margin-top: 36rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 24rem;
+  margin-top: 32rem;
+}
+
+.galleryWall {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18rem;
+}
+
+.galleryCard {
+  padding: 18rem;
+  border-radius: 24rem;
+
+  strong {
+    display: block;
+    margin-top: 16rem;
+    font-size: 18rem;
+    color: var(--color-heading);
+  }
+
+  p {
+    margin-top: 10rem;
+    font-size: 14rem;
+    color: var(--color-text);
+  }
+}
+
+.galleryPreview {
+  height: 180rem;
+  border-radius: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(69, 203, 183, 0.12), rgba(69, 203, 183, 0.03)),
+    rgba(255, 255, 255, 0.02);
+
+  span {
+    width: 62rem;
+    height: 62rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(69, 203, 183, 0.16);
+    color: var(--color-heading);
+    font-size: 18rem;
+    font-weight: 700;
+  }
+}
+
+.activityPanel {
+  padding: 28rem;
+  border-radius: 28rem;
+
+  h3 {
+    margin-top: 18rem;
+    font-size: 30rem;
+  }
+}
+
+.activityList {
+  display: grid;
+  gap: 16rem;
+  margin-top: 22rem;
+}
+
+.activityCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14rem;
+  padding: 20rem 22rem;
+  border-radius: 20rem;
+
+  p {
+    margin-top: 0;
+    font-size: 15rem;
+    color: var(--color-text);
+  }
+}
+
+.activityDot {
+  width: 14rem;
+  height: 14rem;
+  margin-top: 6rem;
+  border-radius: 50%;
+  background: var(--color-accent-500);
+  box-shadow: 0 0 0 8rem rgba(69, 203, 183, 0.12);
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1023px) {
   .hero,
   .profileSection {
@@ -260,7 +363,9 @@
 
   .heroGrid,
   .storyGrid,
-  .profileGrid {
+  .profileGrid,
+  .galleryGrid,
+  .galleryWall {
     grid-template-columns: 1fr;
   }
 
@@ -269,9 +374,8 @@
     padding-bottom: 0;
   }
 
-  .visualColumn,
-  .visualStage {
-    min-height: 620rem;
+  .heroPanel {
+    padding: 28rem;
   }
 }
 
@@ -290,18 +394,27 @@
     font-size: 18rem;
   }
 
-  .visualColumn,
-  .visualStage {
-    min-height: 460rem;
+  .heroPanel {
+    padding: 24rem;
   }
 
-  .portraitImage {
-    height: 78%;
+  .heroPanel h2 {
+    font-size: 28rem;
   }
 
   .storyCard,
   .highlightCard,
-  .profileCard {
+  .profileCard,
+  .activityPanel {
     padding: 24rem;
+  }
+
+  .galleryCard,
+  .activityCard {
+    padding: 20rem;
+  }
+
+  .activityPanel h3 {
+    font-size: 24rem;
   }
 }
