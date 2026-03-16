@@ -26,7 +26,7 @@ const timelineItems = [
     title: 'Bằng khen Ngày Thầy thuốc Việt Nam 2026',
     description:
       'Dấu mốc ghi nhận thêm cho quá trình cống hiến trong ngành y, nhân dịp Ngày Thầy thuốc Việt Nam năm 2026.',
-    image: '/bangkhenngaythaythuoc.JPG',
+    image: '/images/doctor-bangkhen-thaythuoc.jpg',
   },
   {
     year: '15/11/2025',
