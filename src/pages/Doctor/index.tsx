@@ -37,6 +37,12 @@ const timelineItems = [
     image: '/images/doctor-conference.jpg',
   },
   {
+    year: 'Ngành nghề',
+    title: 'Tham dự Giỗ tổ ngành Mắt kính lần thứ 32',
+    description: 'Gắn bó với ngành kính mắt, tham gia sự kiện truyền thống tôn vinh nghề nghiệp và kết nối cộng đồng chuyên môn.',
+    image: '/images/doctor-gioto.jpg',
+  },
+  {
     year: 'Ghi nhận',
     title: 'Nhận bằng khen của Chủ tịch UBND tỉnh Vĩnh Long',
     description: 'Nhân Ngày Thầy thuốc Việt Nam 27/2, vinh dự được trao bằng khen ghi nhận quá trình cống hiến trong công tác khám chữa bệnh.',
@@ -119,8 +125,7 @@ export const DoctorPage = () => {
                   <div className={styles.timelineDot} aria-hidden="true">
                     <span>{index + 1}</span>
                   </div>
-                  <div className={styles.timelineCard}>
-                    <span className={styles.timelineYear}>{item.year}</span>
+                  <div className={`${styles.timelineCard} ${item.image ? styles.timelineCardWithImage : ''}`}>
                     {item.image && (
                       <img
                         src={item.image}
@@ -128,8 +133,11 @@ export const DoctorPage = () => {
                         className={styles.timelineImage}
                       />
                     )}
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <div className={styles.timelineCardContent}>
+                      <span className={styles.timelineYear}>{item.year}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
                 </article>
               ))}

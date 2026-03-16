@@ -352,7 +352,16 @@
     transform: translateY(-3rem);
     box-shadow: var(--shadow-card-hover);
   }
+}
 
+.timelineCardWithImage {
+  display: grid;
+  grid-template-columns: 200rem 1fr;
+  gap: 24rem;
+  align-items: center;
+}
+
+.timelineCardContent {
   h3 {
     margin-top: 16rem;
     font-size: 22rem;
@@ -380,12 +389,12 @@
 }
 
 .timelineImage {
-  width: 100%;
-  height: 280rem;
+  width: 200rem;
+  height: 200rem;
   object-fit: cover;
   object-position: top;
-  border-radius: 18rem;
-  margin-top: 18rem;
+  border-radius: 16rem;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 1023px) {
@@ -467,14 +476,19 @@
 
   .timelineCard {
     padding: 22rem;
+  }
 
-    h3 {
-      font-size: 19rem;
+  .timelineCardWithImage {
+    grid-template-columns: 1fr;
+
+    .timelineImage {
+      width: 100%;
+      height: 200rem;
     }
   }
 
-  .timelineImage {
-    height: 220rem;
+  .timelineCardContent h3 {
+    font-size: 19rem;
   }
 
   .timelineDot {
