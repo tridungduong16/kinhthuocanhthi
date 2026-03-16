@@ -170,10 +170,10 @@ export const HomePage = () => {
               <span className={styles.sectionLabel}>Chuyên môn</span>
               <h2>Bác sĩ Nguyễn Anh Thi</h2>
               <p>
-                Bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt Vĩnh Long với hơn 20 năm
+                Bác sĩ chuyên khoa 2, Trưởng khoa Bệnh viện Mắt Vĩnh Long với hơn 30 năm
                 kinh nghiệm trong lĩnh vực nhãn khoa.
               </p>
-              <div className={styles.portraitBadge}>Bác sĩ chuyên khoa 2 • Hơn 20 năm kinh nghiệm</div>
+              <div className={styles.portraitBadge}>Bác sĩ chuyên khoa 2 • Hơn 30 năm kinh nghiệm</div>
             </div>
 
             <article className={styles.doctorTeaserCard}>

@@ -448,47 +448,69 @@
 @media screen and (max-width: 767px) {
   .hero,
   .profileSection {
-    padding: 62rem 0;
+    padding: 48rem 0;
   }
 
-  .content h1,
-  .sectionHeading h2 {
-    font-size: 36rem;
+  .heroGrid {
+    gap: 24rem;
   }
 
-  .summary {
-    font-size: 18rem;
-  }
+  .content {
+    max-width: 100%;
+    padding: 0;
 
-  .heroPanel {
-    padding: 24rem;
-  }
-
-  .heroPanel h2 {
-    font-size: 28rem;
-  }
-
-  .storyCard,
-  .highlightCard,
-  .profileCard {
-    padding: 24rem;
-  }
-
-  .timelineCard {
-    padding: 22rem;
-  }
-
-  .timelineCardWithImage {
-    grid-template-columns: 1fr;
-
-    .timelineImage {
-      width: 100%;
-      height: 200rem;
+    h1 {
+      font-size: 32rem;
     }
   }
 
-  .timelineCardContent h3 {
-    font-size: 19rem;
+  .summary {
+    font-size: 17rem;
+  }
+
+  .lead {
+    font-size: 15rem;
+  }
+
+  .sectionHeading h2 {
+    font-size: 28rem;
+  }
+
+  .heroPanel {
+    padding: 22rem;
+
+    h2 {
+      font-size: 24rem;
+    }
+  }
+
+  .heroStatCard {
+    padding: 18rem 20rem;
+
+    strong {
+      font-size: 24rem;
+    }
+
+    span {
+      font-size: 13rem;
+    }
+  }
+
+  .factChip {
+    font-size: 13rem;
+    padding: 6rem 12rem;
+    min-height: 30rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    min-height: 44rem;
+    font-size: 14rem;
+  }
+
+  .timelineLine {
+    left: 18rem;
   }
 
   .timelineDot {
@@ -498,5 +520,45 @@
     span {
       font-size: 13rem;
     }
+  }
+
+  .timelineItem,
+  .timelineItemRight {
+    .timelineCard {
+      margin-left: 18rem;
+    }
+  }
+
+  .timelineCard {
+    padding: 20rem;
+  }
+
+  .timelineCardWithImage {
+    grid-template-columns: 1fr;
+    gap: 16rem;
+  }
+
+  .timelineImage {
+    width: 100%;
+    height: 180rem;
+  }
+
+  .timelineCardContent h3 {
+    font-size: 18rem;
+    margin-top: 12rem;
+  }
+
+  .timelineCardContent p {
+    font-size: 14rem;
+  }
+
+  .timelineYear {
+    font-size: 12rem;
+    padding: 5rem 10rem;
+    min-height: 28rem;
+  }
+
+  .timelineSection {
+    margin-top: 32rem;
   }
 }
